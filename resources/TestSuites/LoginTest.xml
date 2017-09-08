@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Auth Server Service suite " verbose="1" >
+<listeners>
+      <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+      <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+     
+      <listener class-name="com.deem.frwk.utils.ExtentReporterNG" />
+	  <listener class-name="com.deem.frwk.utils.EmailableReporter" />
+  </listeners>
+  <test name=" Auth Server Service Sanity Test Suite " >
+    <classes>
+      <class name="com.deem.joltage.platformtests.test.AuthServerTests"/>
+    </classes>
+ </test>
+</suite>

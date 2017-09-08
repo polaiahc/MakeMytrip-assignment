@@ -1,0 +1,33 @@
+{
+	"Enpoints": {
+            "HotalSearchService": "http://relevance-engine-stage.scqa.rden.us/search-service/v2",
+            "CarRentalService": "http://relevance-engine-stage.scqa.rden.us/search-service/v2",
+            "CategorySearchService": "http://scqalres01.scqa.rden.us:8080/category-service/rest/categories/item/depth/0",
+            "LocationService": "http://fls-qa.scqa.rden.us:8080/location-rest/address/geocodeAddress/en?",
+            "ValidatedPostalAddress": "http://fls-qa.scqa.rden.us:8080/location-rest/address/postal?",
+            "ValidateGeocodeQueary": "http://fls-qa.scqa.rden.us:8080/location-rest/address",
+            "ReverseGeocode": "http://fls-qa.scqa.rden.us:8080/location-rest/address",
+            "IpLocationService": "http://fls-qa.scqa.rden.us:8080/location-rest/iplocation/",
+            "ContactSolorService": "http://scqalree05.scqa.rden.us:8080/search/contacts/select/",
+            "UserProfileService": "http://scqalgpe01.scqa.rden.us:8080/",
+            "CarRentalSolorService": "http://scqalree01.scqa.rden.us:8080/search/carrental/select/",
+            "AuthServerService1": "http://scqalgps04.scqa.rden.us:7333/login/rest/",
+            "AuthServerService":"http://scqalgps04.scqa.rden.us:7333/login/rest/",
+            "NotificationService": "http://scqalnot02.scqa.rden.us:8080/rest/service/notification",
+            "AchService": "http://scqalach01.scqa.rden.us:8080/rest",
+            "MobileAPI": "http://scqalcbg03.scqa.rden.us:8080/rest",
+            "MobileTAXHISTORY": "http://scqaltrs02.scqa.rden.us:8080/rest",
+            "mobilePhone":"http://mobile.deemstage2.com",
+            "MobileExpanceReport":"http://stage3-exp-svc.scqa.rden.us:8080",
+            "MobileStage2":"http://mobile.deemstage2.com",
+            "MobileStage3":"http://mobile.deemstage3.com",
+            "MobileTransation": "http://scqaltrs02.scqa.rden.us:8080",
+            "MobileTaxCarService":"http://scqaltrs03.scqa.rden.us:8080",
+            "PartnerAPI":"http://scqalcbg04.scqa.rden.us:8080/rest",
+            "Branding":"http://scqalcbg03.scqa.rden.us:8080/rest",
+            "MobileProdService":"https://mobile.deem.com",
+            "MobileProdReardencommerceService":"https://mobile.reardencommerce.com/login/apps/api.do",
+            "RecommendationService": "http://scqalres01.scqa.rden.us:8080/recommendation-service/restful-services/item/recommend"
+      }
+
+}

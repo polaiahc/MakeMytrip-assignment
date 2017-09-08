@@ -1,0 +1,10 @@
+{
+	"Enpoints": {
+		"CarRentalService": "http://relevance-engine-stage.scqa.rden.us/search-service/v2",
+		"LocationService": "http://localhost:8083/location-rest/address/geocodeAddress/en?",
+		"ValidatedPostalAddress": "http://localhost:8083/location-rest/address/postal?",
+		"ValidateGeocodeQueary":"http://localhost:8083/location-rest/address",
+		"ReverseGeocode":"http://localhost:8083/location-rest/address",
+		"IpLocationService":"http://localhost:8083/location-rest/iplocation/"
+		}
+	  }

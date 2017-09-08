@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="User Profile suite " verbose="1" >
+  <test name=" User Profile Service Test Suite " >
+    <classes>
+      <class name="com.deem.joltage.platform.test.RENightlySuiteTest"/>
+    </classes>
+ </test>
+</suite>
