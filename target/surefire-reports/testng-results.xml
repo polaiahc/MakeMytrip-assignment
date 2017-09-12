@@ -1,11 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="0" passed="0">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="com.pramati.test.LoginTest" duration-ms="3" started-at="2017-09-08T09:09:16Z" finished-at="2017-09-08T09:09:16Z">
+  <suite name="Command line suite" duration-ms="10188" started-at="2017-09-12T02:46:25Z" finished-at="2017-09-12T02:46:36Z">
     <groups>
     </groups>
-    <test name="Command line test" duration-ms="3" started-at="2017-09-08T09:09:16Z" finished-at="2017-09-08T09:09:16Z">
+    <test name="Command line test" duration-ms="10188" started-at="2017-09-12T02:46:25Z" finished-at="2017-09-12T02:46:36Z">
+      <class name="com.pramati.test.ApplicationLoginTest">
+        <test-method status="PASS" signature="setUP()[pri:0, instance:com.pramati.test.ApplicationLoginTest@3dd3bcd]" name="setUP" is-config="true" duration-ms="9432" started-at="2017-09-12T08:16:25Z" finished-at="2017-09-12T08:16:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUP -->
+        <test-method status="PASS" signature="LoginMyntra()[pri:0, instance:com.pramati.test.ApplicationLoginTest@3dd3bcd]" name="LoginMyntra" duration-ms="737" started-at="2017-09-12T08:16:35Z" finished-at="2017-09-12T08:16:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginMyntra -->
+      </class> <!-- com.pramati.test.ApplicationLoginTest -->
     </test> <!-- Command line test -->
-  </suite> <!-- com.pramati.test.LoginTest -->
+  </suite> <!-- Command line suite -->
 </testng-results>

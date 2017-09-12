@@ -1,20 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="0" passed="0">
+<testng-results skipped="1" failed="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="24" started-at="2017-09-08T09:27:40Z" finished-at="2017-09-08T09:27:40Z">
+  <suite name="Default suite" duration-ms="7712" started-at="2017-09-12T11:32:59Z" finished-at="2017-09-12T11:33:06Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="24" started-at="2017-09-08T09:27:40Z" finished-at="2017-09-08T09:27:40Z">
+    <test name="Default test" duration-ms="7712" started-at="2017-09-12T11:32:59Z" finished-at="2017-09-12T11:33:06Z">
       <class name="com.pramati.test.ApplicationLoginTest">
-        <test-method status="FAIL" signature="setUp()[pri:0, instance:null]" name="setUp" is-config="true" duration-ms="0" started-at="2017-09-08T14:57:40Z" finished-at="2017-09-08T14:57:40Z">
-          <exception class="java.lang.NullPointerException">
+        <test-method status="PASS" signature="setUP()[pri:0, instance:com.pramati.test.ApplicationLoginTest@464bee09]" name="setUP" is-config="true" duration-ms="7680" started-at="2017-09-12T17:02:59Z" finished-at="2017-09-12T17:03:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUP -->
+        <test-method status="SKIP" signature="LoginMyntra(org.openqa.selenium.WebDriver)[pri:0, instance:com.pramati.test.ApplicationLoginTest@464bee09]" name="LoginMyntra" duration-ms="0" started-at="2017-09-12T17:03:06Z" finished-at="2017-09-12T17:03:06Z">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Method LoginMyntra requires 1 parameters but 0 were supplied in the @Test annotation.]]>
+            </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:178)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)
-	at org.testng.TestRunner.beforeRun(TestRunner.java:648)
-	at org.testng.TestRunner.run(TestRunner.java:616)
+              <![CDATA[org.testng.TestNGException: 
+Method LoginMyntra requires 1 parameters but 0 were supplied in the @Test annotation.
+	at org.testng.internal.Parameters.checkParameterTypes(Parameters.java:191)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:127)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:376)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:451)
+	at org.testng.internal.Invoker.handleParameters(Invoker.java:1270)
+	at org.testng.internal.Invoker.createParameters(Invoker.java:985)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1075)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
 	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
 	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
 	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
@@ -29,36 +45,10 @@
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+          </exception> <!-- org.testng.TestNGException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="FAIL" signature="logout(java.util.List)[pri:0, instance:null]" name="logout" is-config="true" duration-ms="0" started-at="2017-09-08T14:57:40Z" finished-at="2017-09-08T14:57:40Z">
-          <exception class="java.lang.NullPointerException">
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:178)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)
-	at org.testng.TestRunner.afterRun(TestRunner.java:1023)
-	at org.testng.TestRunner.run(TestRunner.java:628)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
-	at org.testng.TestNG.run(TestNG.java:1024)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- logout -->
+        </test-method> <!-- LoginMyntra -->
       </class> <!-- com.pramati.test.ApplicationLoginTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

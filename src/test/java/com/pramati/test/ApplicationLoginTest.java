@@ -1,66 +1,48 @@
 package com.pramati.test;
-import java.util.List;
-
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import com.pramati.pages.HomePage;
+import com.pramati.util.BaseTest;
 
 
 /**
  * Unit test for simple App.
  */
 
-public class ApplicationLoginTest {
+public class ApplicationLoginTest{
 	
-	private WebDriver driver = null;
-	public static String sHomeWindowId = null;
-
-	/**
-	 * Constructor method for initialization of data and objects.
-	 * 
-	 * @param wDriver
-	 */
-	public ApplicationLoginTest(WebDriver wDriver){
-		this.driver =  wDriver;
-	}
-
+	public static WebDriver driver;
+	public static BaseTest baseTest;
+	public static HomePage homePage;
+	
 	 
-	@BeforeTest
-	public void setUp() {
-		WebDriver driver = new FirefoxDriver();
-		driver.get("https://www.myntra.com/");
-		driver.manage().window().maximize();
+	@BeforeTest()
+	public static void setUP() throws Exception {
+	   baseTest=new BaseTest(driver);
+	   homePage=new HomePage(driver);
+	   baseTest.startBrowser("https://www.myntra.com/");
+		 
+		
 
 	}
-	
-	
-	@Test
-	public boolean login(List<String> dataParamList) {
-		//login
-		String sUserName = dataParamList.get(0);
-		String sPassword = dataParamList.get(1);
-	
-		HomePage ObjloginPage = PageFactory.initElements(driver, HomePage.class);
-		
-		
-		return false;
 
+	@Test()
+	public static void LoginMyntra() throws Exception {
 		
-	}
+		
+		homePage = PageFactory.initElements(driver, HomePage.class);
 
-	/**
-	 * Logout from the application
-	 * 
-	 * @param dataParamList
-	 * @return
-	 */
-	@AfterTest
-	public boolean logout(List<String> dataParamList) {
-		return false;
+		homePage.getSignInButton().click();
+        homePage.getSigninLink().click();
+        homePage.getUserName().sendKeys("mahesh");
+        homePage.getPassword().sendKeys("mahesh");
+        homePage.geteSignIn().click();
+		//homePage.mLogin("mahesh.rc25@gmail.com", "Siva@123");
+		baseTest.closeBrowser();
+		System.out.println("END");
+
 	}
 }
