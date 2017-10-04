@@ -1,5 +1,4 @@
 package com.pramati.dp;
-
 import java.util.concurrent.ThreadLocalRandom;
 import org.testng.annotations.DataProvider;
 public class AccountMgmtDP {
@@ -7,6 +6,7 @@ public class AccountMgmtDP {
 	
 	/**
 	 * @author Maheswara Reddy
+	 * 
 	 */  
 	
 	@DataProvider
@@ -34,6 +34,7 @@ public class AccountMgmtDP {
 		Object[][] dataSet = new Object[][] { arr };
 		return dataSet;
 	}
+	
 	@DataProvider
 	public static Object[][] noOfProductsCount() {
          
@@ -41,4 +42,15 @@ public class AccountMgmtDP {
 		Object[][] dataSet = new Object[][] { arr };
 		return dataSet;
 	}
+	
+	
+	@DataProvider
+	public static Object[][] AddMultpleProductsToCart() {
+         
+		String[] arr = {"https://www.myntra.com/","mahesh.rc25@gmail.com", "Siva@123","Shirts"};
+		Object[][] dataSet = new Object[][] { arr };
+		return dataSet;
+	}
+	
+	
 }

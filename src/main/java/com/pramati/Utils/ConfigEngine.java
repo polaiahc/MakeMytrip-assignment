@@ -1,4 +1,4 @@
-package com.pramati.util;
+package com.pramati.Utils;
 
 import java.io.File;
 import java.io.FileInputStream;

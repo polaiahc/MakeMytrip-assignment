@@ -1,4 +1,4 @@
-package com.pramati.util;
+package com.pramati.Utils;
 
 	/**
 	 * @author Maheswara Reddy

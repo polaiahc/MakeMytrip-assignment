@@ -53,7 +53,6 @@ public class HomePage extends PageObject {
 	@FindBy(xpath="//label[text()='Male']")
 	private WebElement Male;
 	
-
 	@FindBy(xpath="//lable[text()='Female']")
 	private WebElement Female;
 	

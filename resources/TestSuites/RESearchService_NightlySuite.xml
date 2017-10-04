@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<suite name="RE Nightly suite " verbose="1" >
-  <test name=" RE Nightly Test Suite " >
-    <classes>
-      <class name="com.deem.joltage.platform.test.RENightlySuiteTest"/>
-    </classes>
- </test>
-</suite>

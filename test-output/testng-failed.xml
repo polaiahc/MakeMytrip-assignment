@@ -1,17 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test name="Default test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Auth Server Service suite ]">
+  <listeners>
+    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+    <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+    <listener class-name="com.pramati.util.ExtentReporterNG"/>
+    <listener class-name="com.pramati.util.EmailableReporter"/>
+  </listeners>
+  <test name=" Auth Server Service Sanity Test Suite (failed)">
     <classes>
       <class name="com.pramati.test.AccountMgmtTest">
         <methods>
           <include name="myntra_RemoveAddress" invocation-numbers="0"/>
           <include name="tearDown"/>
-          <include name="myntra_NoOfProductsPerPageTest" invocation-numbers="0"/>
           <include name="setUp"/>
           <include name="cleanUp"/>
+          <include name="myntra_ChangeShippingAddress" invocation-numbers="0"/>
         </methods>
       </class> <!-- com.pramati.test.AccountMgmtTest -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!--  Auth Server Service Sanity Test Suite (failed) -->
+</suite> <!-- Failed suite [Auth Server Service suite ] -->

@@ -1,4 +1,4 @@
-package com.pramati.util;
+package com.pramati.Utils;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

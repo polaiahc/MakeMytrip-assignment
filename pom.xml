@@ -48,6 +48,13 @@
 			<scope>test</scope>
 		</dependency>
 
+		<!-- https://mvnrepository.com/artifact/com.google.inject/guice -->
+		<dependency>
+			<groupId>com.google.inject</groupId>
+			<artifactId>guice</artifactId>
+			<version>3.0</version>
+		</dependency>
+
 		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
@@ -60,62 +67,62 @@
 			<artifactId>json-simple</artifactId>
 			<version>${json-simple.version}</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
 			<version>${testng.version}</version>
 			<scope>compile</scope>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.apache.httpcomponents</groupId>
 			<artifactId>httpcore</artifactId>
 			<version>${httpcore.version}</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
 			<version>${selenium-java.version}</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-api</artifactId>
 			<version>${selenium-java.version}</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>log4j</groupId>
 			<artifactId>log4j</artifactId>
 			<version>${log4j.version}</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.json</groupId>
 			<artifactId>json</artifactId>
 			<version>${json.version}</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>com.relevantcodes</groupId>
 			<artifactId>extentreports</artifactId>
 			<version>${extentreports.version}</version>
 		</dependency>
-		
+
 		<!-- https://mvnrepository.com/artifact/com.github.2gis.winium/winium-elements-desktop -->
 		<dependency>
 			<groupId>com.github.2gis.winium</groupId>
 			<artifactId>winium-elements-desktop</artifactId>
 			<version>${winium.version}</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>com.github.2gis.winium</groupId>
 			<artifactId>winium-webdriver</artifactId>
 			<version>${winium.version}</version>
 		</dependency>
-		
+
 	</dependencies>
 </project>

@@ -1,5 +1,4 @@
 package com.pramati.test;
-
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -40,6 +39,7 @@ public class AccountMgmtTest extends BaseTest  {
 		signUpPage.getUrl(url);
 		Assert.assertTrue(signUpPage.isInitialized(),"Sign in link is presented.");
 		signUpPage.getSigninHome().click();
+		Thread.sleep(10000);
 		signUpPage.getSignUpLink().click();
 		signUpPage.getUserName().sendKeys(email);
 		signUpPage.getPassword().sendKeys(password);
@@ -116,11 +116,11 @@ public class AccountMgmtTest extends BaseTest  {
 		Thread.sleep(10000);
 		String products=signUpPage.getTotalProducts().getText();
 		System.out.println("products ::"+products);
-		Assert.assertEquals("Shirts - Buy Shirts Online for Men & Women in India - Myntra", signUpPage.confirmationHeader());
+		Assert.assertEquals("Online Shopping For Women Men Boy Girl Fashion & Lifestyle Myntra - Buy Online Shopping For Women Men Boy Girl Fashion & Lifestyle Myntra online in India", signUpPage.confirmationHeader());
 		Assert.assertNotNull(products);
 		
 		
-	}	
+	}	                               
 	
 	
 	@Test(priority =7, groups = { "Smoke","Sanity" }, dataProvider = "appLogout", dataProviderClass = AccountMgmtDP.class ,description="Add new Address to Account.")
@@ -129,7 +129,7 @@ public class AccountMgmtTest extends BaseTest  {
 		HomePage signUpPage =PageFactory.initElements(driver, HomePage.class);
 		signUpPage.getUrl(url);
 		Assert.assertTrue(signUpPage.isInitialized(),"Sign in link is presented.");
-		signUpPage.login(email, password);
+		signUpPage.login(email, password);	
 		Thread.sleep(10000);
 		signUpPage.getSearchBox().sendKeys("2032637");
 		signUpPage.getSearchBoxSubmit().click();
@@ -142,20 +142,20 @@ public class AccountMgmtTest extends BaseTest  {
 		productPage.getAddToBag();
 		productPage.getBag().click();
 		productPage.getPlaceOrder();
-		
 		Thread.sleep(10000);
 		
 	}	
 	
 	
 	
-	@Test(priority =8, groups = { "Smoke","Sanity" }, dataProvider = "appLogout", dataProviderClass = AccountMgmtDP.class ,description="Add product to card and verifying items count.")
+	@Test(priority =8, groups = { "Smoke","Sanity" }, dataProvider = "AddMultpleProductsToCart", dataProviderClass = AccountMgmtDP.class ,description="Add product to card and verifying items count.")
 	public void myntra_AddMultpleProductsToCartTest(String url,String email, String password,String searchString) throws Exception{
 	
 		HomePage signUpPage =PageFactory.initElements(driver, HomePage.class);
 		signUpPage.getUrl(url);
 		Assert.assertTrue(signUpPage.isInitialized(),"Sign in link is presented.");
 		signUpPage.login(email, password);
+	
 		Thread.sleep(10000);
 		signUpPage.getSearchBox().sendKeys("2032637");
 		signUpPage.getSearchBoxSubmit().click();
@@ -165,12 +165,11 @@ public class AccountMgmtTest extends BaseTest  {
 		Assert.assertEquals(productPage.getProductTitle().getText(), "WROGN Men Blue & Brown Slim Fit Checked Casual Shirt");
 		productPage.getSize().click();
 		productPage.getAddToBag();
-		
 		productPage.getBag().click();
 		
 		Thread.sleep(10000);
-		System.out.println("Bage Count : "+productPage.getBagCount().getText());
 		
+		System.out.println("Bage Count : "+productPage.getBagCount().getText());
 		HomePage signUpPage2 =PageFactory.initElements(driver, HomePage.class);
 		signUpPage2.getMyntraLogo().click();
 		signUpPage2.getSearchBox().sendKeys("2032637");
@@ -187,4 +186,46 @@ public class AccountMgmtTest extends BaseTest  {
 		Thread.sleep(10000);
 		System.out.println("Bage Count : "+productPage.getBagCount().getText());
 	}	
+	
+	
+	
+	
+	@Test(priority =8, groups = { "Smoke","Sanity" }, dataProvider = "AddMultpleProductsToCart", dataProviderClass = AccountMgmtDP.class ,description="Add product to card and verifying items count.")
+	public void myntra_serchForOrderStatusTest(String url,String email, String password,String searchString) throws Exception{
+	
+		HomePage signUpPage =PageFactory.initElements(driver, HomePage.class);
+		signUpPage.getUrl(url);
+		Assert.assertTrue(signUpPage.isInitialized(),"Sign in link is presented.");
+		signUpPage.login(email, password);
+	
+		Thread.sleep(10000);
+		signUpPage.getSearchBox().sendKeys("2032637");
+		signUpPage.getSearchBoxSubmit().click();
+		Thread.sleep(10000);
+		Assert.assertEquals("Buy WROGN Men Blue & Brown Slim Fit Checked Casual Shirt - Shirts for Men | Myntra", signUpPage.confirmationHeader());
+		ProductPage productPage =PageFactory.initElements(driver, ProductPage.class);
+		Assert.assertEquals(productPage.getProductTitle().getText(), "WROGN Men Blue & Brown Slim Fit Checked Casual Shirt");
+		productPage.getSize().click();
+		productPage.getAddToBag();
+		productPage.getBag().click();
+		
+		Thread.sleep(10000);
+		
+		System.out.println("Bage Count : "+productPage.getBagCount().getText());
+		HomePage signUpPage2 =PageFactory.initElements(driver, HomePage.class);
+		signUpPage2.getMyntraLogo().click();
+		signUpPage2.getSearchBox().sendKeys("2032637");
+		signUpPage2.getSearchBoxSubmit().click();
+		Thread.sleep(10000);
+		Assert.assertEquals("Buy WROGN Men Blue & Brown Slim Fit Checked Casual Shirt - Shirts for Men | Myntra", signUpPage.confirmationHeader());
+		ProductPage productPage2 =PageFactory.initElements(driver, ProductPage.class);
+		Assert.assertEquals(productPage.getProductTitle().getText(), "WROGN Men Blue & Brown Slim Fit Checked Casual Shirt");
+		
+		productPage2.getSize().click();
+		productPage2.getAddToBag();
+		productPage2.getBag().click();
+		
+		Thread.sleep(10000);
+		System.out.println("Bage Count : "+productPage.getBagCount().getText());
+	}
 }
