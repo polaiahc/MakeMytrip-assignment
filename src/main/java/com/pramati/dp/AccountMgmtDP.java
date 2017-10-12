@@ -13,7 +13,11 @@ public class AccountMgmtDP {
 	public static Object[][] appLogin() {
      
 		String[] arr = {"https://www.myntra.com/","mahesh.rc25@gmail.com", "Siva@123","Login"};
-		Object[][] dataSet = new Object[][] { arr };
+		String[] arr1 = {"https://www.myntra.com/","mahesh.rc25@gmail.com", "Siva@123","Login"};
+		String[] arr2 = {"https://www.myntra.com/","mahesh.rc25@gmail.com", "Siva@123","Login"};
+		String[] arr3 = {"https://www.myntra.com/","mahesh.rc25@gmail.com", "Siva@123","Login"};
+		
+		Object[][] dataSet = new Object[][] { arr,arr1,arr2,arr3 };
 		return dataSet;
 	}
 
