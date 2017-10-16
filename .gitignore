@@ -1,0 +1,8 @@
+/target/
+total 72
+.classpath
+.project
+target/
+.DS_Store
+.settings
+/test-output/

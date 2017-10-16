@@ -1,203 +1,257 @@
 package com.pramati.pages;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 
 public class HomePage extends PageObject {
 
-	
 	public HomePage(WebDriver driver) {
 		super(driver);
 		driver.manage().window().maximize();
 	}
-	
-	@FindBy(xpath = "//span[@class='myntra-logo']")
-	private WebElement myntraLogo;
 
-	@FindBy(xpath = "//html/head/title[1]")
-	private WebElement header;
-	
-	@FindBy(xpath = "//a[text()='login']")
-	private WebElement signinLink;
+	@FindBy(xpath = "//*[@id='hp-widget__sfrom']")
+	private WebElement xFromLocation;
 
-	@FindBy(xpath = "//input[@name='email']")
-	private WebElement eUserName;
-
-	@FindBy(xpath = "//span[@class='myntraweb-sprite desktop-iconUser sprites-user']")
-	private WebElement eLoginButton;
-
-	@FindBy(xpath = "//input[@name='password']")
-	private WebElement ePassword;
-
-	@FindBy(xpath = ".//*[@id='desktop-header-cnt']/div[2]/div[3]/input")
-	private WebElement eSignIn;
-
-	@FindBy(xpath = "//a[text()='Sign-out' and contains(@id,'logout')]")
-	private WebElement logoutButton;
-	
-	@FindBy(xpath="//*[@id='desktop-header-cnt']/div[2]/div[2]/div/div[1]/span[1]")
-	private WebElement signinHome;
-
-	@FindBy(xpath=".//*[@id='mountRoot']/div/div/div/form/fieldset[2]/button")
-	private WebElement signIN;
-	
-	@FindBy(xpath="//div[@class='desktop-userIconsContainer']")
-	private WebElement signOut;
-	
-	@FindBy(xpath="//a[text()='Sign up']")
-	private WebElement signUpLink;
-	
-	@FindBy(xpath="//input[@name='mobile']")
-	private WebElement mobile;
-	
-	@FindBy(xpath="//label[text()='Male']")
-	private WebElement Male;
-	
-	@FindBy(xpath="//lable[text()='Female']")
-	private WebElement Female;
-	
-	@FindBy(xpath="//button[text()='REGISTER']")
-	private WebElement register;
-	
-	@FindBy(xpath="//div[text()=' Logout ']")
-	private WebElement myntraLogut;
-
-	@FindBy(xpath="//div[@class='desktop-userIconsContainer']")
-	private WebElement homeLogutLink;
-	
-	@FindBy(xpath="//div[text()='Saved Addresses']")
-	private WebElement savedAddresses;
-	
-	@FindBy(xpath="//input[@placeholder='Search']")
-	private WebElement searchBox;
-	
-	@FindBy(xpath="//a[@class='desktop-submit']")
-	private WebElement searchBoxSubmit;
-	
-	@FindBy(xpath="//span[@class='horizontal-filters-sub']")
-	private WebElement totalProducts;
-	
-	// --------------------------------------------------------------
-
-	public WebElement getTotalProducts() {
-		return totalProducts;
+	public WebElement getxFromLocation() {
+		return xFromLocation;
 	}
 
-	public WebElement getSearchBoxSubmit() {
-		return searchBoxSubmit;
+	@FindBy(xpath = "//*[@id='hp-widget__sTo']")
+	private WebElement xToLocation;
+
+	public WebElement getxToLocation() {
+		return xToLocation;
 	}
 
-	public WebElement getSearchBox() {
-		return searchBox;
+	@FindBy(id = "hp-widget__depart")
+	private WebElement iDepartDate;
+
+	public WebElement getiDepartDate() {
+		return iDepartDate;
 	}
 
-	public WebElement getSavedAddresses() {
-		return savedAddresses;
+	@FindBy(xpath = ".//*[@id='js-child_counter']/li[1]")
+	private WebElement xChildCount;
+
+	public WebElement getxChildCount() {
+		return xChildCount;
 	}
 
-	public WebElement getHomeLogutLink() {
-		return homeLogutLink;
-	}
-	
-	public WebElement getMyntraLogut() {
-		return myntraLogut;
+	@FindBy(xpath = "//*[@class='close_pax pull-right']")
+	private WebElement xPassengerSelection;
+
+	public WebElement getxPassengerSelection() {
+		return xPassengerSelection;
 	}
 
-	public WebElement getRegister() {
-		return register;
+	@FindBy(xpath = "//label[contains(text(), 'My dates are flexible')]/../../../div[1]//a[@title='Next']/following-sibling::div/span[1]")
+	private WebElement xSelectDate;
+
+	public WebElement getxSelectDate() {
+		return xSelectDate;
 	}
 
-	public WebElement getFemale() {
-		return Female;
+	@FindBy(xpath = "(//span[text()='Next'])[1]")
+	private WebElement xNextArrow;
+
+	public WebElement getxNextArrow() {
+		return xNextArrow;
 	}
 
-	public WebElement getMobile() {
-		return mobile;
-	}
-	
-	public WebElement getMale() {
-		return Male;
+	@FindBy(xpath = "//label[text()='one way']")
+	private WebElement oneWayButton;
+
+	public WebElement getOneWayButton() {
+		return oneWayButton;
 	}
 
-	public WebElement getSigninHome() {
-		return signinHome;
+	@FindBy(xpath = "//label[contains(text(), 'My dates are flexible')]/../../../div[1]//a[@title='Next']/following-sibling::div/span[1]")
+	private WebElement xDatePicker;
+
+	public WebElement getxDatePicker() {
+		return xDatePicker;
 	}
 
-	public WebElement getSignUpLink() {
-		return signUpLink;
-	}
-	
-	public WebElement geteLoginButton() {
-		return eLoginButton;
+	@FindBy(xpath = "//table/..//div/span[contains(text(),'Decem')]/../../..//td/a[contains(text(), '25')]")
+	private WebElement xSDate;
+
+	@FindBy(xpath = "//*[@id='hp-widget__paxCounter']")
+	private WebElement xPassenger;
+
+	public WebElement getxPassenger() {
+		return xPassenger;
 	}
 
-	public WebElement geteSignIn() {
-		return eSignIn;
+	public WebElement getxSDate() {
+		return xSDate;
 	}
 
-	public WebElement getSigninLink() {
-		return signinLink;
+	@FindBy(xpath = "//*[@id='js-adult_counter']/li[1]")
+	private WebElement xAdultCount;
+
+	public WebElement getxAdultCount() {
+		return xAdultCount;
 	}
 
-	public WebElement getUserName() {
-		return eUserName;
+	@FindBy(xpath = "//*[@class='close_pax pull-right']")
+	private WebElement xPassengerSelectionButton;
+
+	public WebElement getxPassengerSelectionButton() {
+		return xPassengerSelectionButton;
 	}
 
-	public WebElement getLoginButton() {
-		return eLoginButton;
+	@FindBy(xpath = "//*[@id='searchBtn']")
+	private WebElement xSearchButton;
+
+	public WebElement getxSearchButton() {
+		return xSearchButton;
 	}
 
-	public WebElement getPassword() {
-		return ePassword;
+	@FindBy(xpath = "//div[@class='main col-lg-9 col-md-9 col-sm-12 col-xs-12']")
+	private WebElement xFlightInfo;
+
+	public WebElement getxFlightInfo() {
+		return xFlightInfo;
 	}
 
-	public WebElement getSignInButton() {
-		return eSignIn;
+	@FindBy(xpath = "//div/span[contains(text(), 'Book')]/../..")
+	private WebElement xFlightDetails;
+
+
+	public WebElement getxflightDetails() {
+		return xFlightDetails;
 	}
 
-	public WebElement getLogoutButton() {
-		return logoutButton;
+	@FindBy(xpath="//div/p/a[contains(text(), 'Book')]/../../../div[3]/span[1]")
+	private WebElement xFlightDepTime;
+
+	public WebElement getxFlightDepTime() {
+		return xFlightDepTime;
 	}
-	
-	
-	public WebElement getMyntraLogo() {
-		return myntraLogo;
+
+	public boolean serchFlight(String FromLocation, String toLocation) throws Exception {
+		driver.manage().window().maximize();
+		this.oneWayButton.click();
+		this.xFromLocation.clear();
+		this.xFromLocation.sendKeys(FromLocation);
+		this.xToLocation.clear();
+		this.xToLocation.sendKeys(toLocation);
+		this.iDepartDate.click();
+		Thread.sleep(2000);
+		String textMonth = this.xDatePicker.getText();
+		if (textMonth != "December") {
+			this.xNextArrow.click();
+			String textMonth2 = this.xDatePicker.getText();
+			// if(textMonth2=="December") {
+			// this.xSDate.click();
+			// System.out.println("ddfgjhgchdh");
+			// }
+		}
+		this.xSDate.click();
+
+		this.xPassenger.click();
+		this.xAdultCount.click();
+		this.xChildCount.click();
+		this.xPassengerSelectionButton.click();
+		this.xSearchButton.click();
+		Thread.sleep(2000);
+
+		//	List<WebElement> flightDetialsList=driver.findElements(By.xpath(xFlightDetails);
+
+		
+		String[] depTime=this.xFlightDepTime.getText().split(":");
+		System.out.println(depTime[0]);
+		
+		int startTime=Integer.parseInt(depTime[0]);
+		System.out.println(startTime);
+		if(startTime>=9 || startTime<=10) {
+
+			String flghtinfo = this.xFlightDetails.getText();
+			System.out.println(flghtinfo);
+
+			String[] flightDetails = flghtinfo.split("\n");
+			System.out.println("Flight Name: "+flightDetails[0]);
+			System.out.println("Flight Number: "+flightDetails[1]);
+			System.out.println("Departure Time: "+flightDetails[2]);
+			System.out.println("From: "+flightDetails[3]);
+			System.out.println("Arrival Time: "+flightDetails[4]);
+			System.out.println("To: "+flightDetails[5]);
+			System.out.println("Duration: "+flightDetails[6]);
+			System.out.println("Flight Type: "+flightDetails[7]);
+			System.out.println("Amount: "+flightDetails[8]);
+			System.out.println("---------------------------------------------------------------------------------------------------------");
+		}
+
+
+		/*else if(size>1) {
+
+			for(int k=1; k<=size; k++) {
+
+
+			String flghtinfo = this.xFlightDetails.getText();
+			System.out.println(flghtinfo);
+
+			String[] flightDetails = flghtinfo.split("\n");
+			System.out.println("Flight Name: "+flightDetails[0]);
+			System.out.println("Flight Number: "+flightDetails[1]);
+			System.out.println("Departure Time: "+flightDetails[2]);
+			System.out.println("From: "+flightDetails[3]);
+			System.out.println("Arrival Time: "+flightDetails[4]);
+			System.out.println("To: "+flightDetails[5]);
+			System.out.println("Duration: "+flightDetails[6]);
+			System.out.println("Flight Type: "+flightDetails[7]);
+			System.out.println("Amount: "+flightDetails[8]);
+			System.out.println("---------------------------------------------------------------------------------------------------------");
+			}
+
+		}else {
+			System.out.println("no flights found");
+		}
+
+
+
+
+		/*
+		 * String flightInfo=this.xFlightInfo.getText(); System.out.println(
+		 * "---------------------------------------------------------------------------------------------------------"
+		 * ); System.out.println("Flight info after search : "+flightInfo);
+		 * 
+		 * String flightAfterSeparator[]=flightInfo.split("Book"); System.out.println(
+		 * "---------------------------------------------------------------------------------------------------------"
+		 * ); System.out.println("Size of Array :"+ flightAfterSeparator.length);
+		 * 
+		 * for (int i=5;i<=flightAfterSeparator.length-2;i++) { System.out.println(
+		 * "---------------------------------------------------------------------------------------------------------"
+		 * ); System.out.println("areay_ "+i+"  ::"+flightAfterSeparator[i]); String[]
+		 * flightInfoLine=flightAfterSeparator[i].split("\n");
+		 * System.out.println("array :"+i+"----"+flightInfoLine[5]+"  --- "
+		 * +flightInfoLine[6]+"  --- "+flightInfoLine[7]);
+		 * 
+		 * String [] startTime=flightInfoLine[5].split(":"); if(startTime.length==2) {
+		 * int startHour=Integer.parseInt(startTime[0]);
+		 * System.out.println("start hor: "+startHour); if(startHour==9 ) {
+		 * System.out.println("Result:"+flightInfoLine[0]); } }
+		 * 
+		 * }
+		 */
+		return true;
+
 	}
-	
-	// ----------------  Methods of Page ----------------------------------------------	
-	
-	public boolean isInitialized() {
-		return signinHome.isDisplayed();
+
+	private Object findElements(By xpath) {
+		// TODO Auto-generated method stub
+		return null;
 	}
-	
-	public String confirmationHeader(){
-		return driver.getTitle();
-	}
-	
-	
-	public boolean getUrl(String url){
+
+	public boolean getUrl(String url) {
 		driver.get(url);
 		return true;
 	}
-	public boolean login(String userName,String password) throws Exception {
-		
-		driver.manage().window().maximize();
-		this.signinHome.click();
-		this.signinLink.click();
-		this.eUserName.sendKeys(userName);
-		this.ePassword.sendKeys(password);
-		this.signIN.click();
-		return true;
-		
-	}
-	
-	public boolean signOut() throws Exception {
-		
-		driver.manage().window().maximize();
-		Thread.sleep(10000);
-		this.homeLogutLink.click();
-		this.myntraLogut.click();
-		return true;
-	}
-		
+
 }
