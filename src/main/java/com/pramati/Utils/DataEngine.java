@@ -5,9 +5,6 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
-/**
- * @author Maheswara Reddy
- */
 
 public class DataEngine {
 	private Connection connection = null;

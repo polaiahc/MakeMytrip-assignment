@@ -1,8 +1,6 @@
 package com.pramati.Utils;
 
-	/**
-	 * @author Maheswara Reddy
-	 */
+	
 
 public class EnvironmentSetting {
 
