@@ -16,7 +16,7 @@ public static  String driverPath = "usr.dir";
 	@BeforeMethod
 	public static void setUp(){
 		System.out.println("launching chrome browser");
-		System.setProperty("webdriver.chrome.driver",  System.getProperty("user.dir") +"//drivers//chromedriver");
+		System.setProperty("webdriver.chrome.driver",  System.getProperty("user.dir") +"//resources//drivers//chromedriver");
 		driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		
