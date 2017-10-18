@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="MakeMyTrip task " verbose="1" >
+
+	
+  
+  <test name=" Assignment MakeMytrip " >
+    <classes>
+      <class name="com.pramati.test.SearchFlightTest"/>
+    </classes>
+ </test>
+</suite>

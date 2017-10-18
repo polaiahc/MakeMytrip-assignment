@@ -174,24 +174,21 @@ public class HomePage2 extends PageObject {
 		this.xSearchButton.click();
 		Thread.sleep(2000);
 
-		// List<WebElement>
-		// flights_Size=driver.findElements(By.xpath("//div/p/a[contains(text(),
-		// 'Book')]"));
-		String[] ss = driver.findElement(By.xpath("//div/p/span[contains(text(), 'found')]")).getText().split(" ");
+		List<WebElement> flights_Size=driver.findElements(By.xpath("//div/p/a[contains(text(),'Book')]"));
 
-		int xx = Integer.parseInt(ss[0]);
-		System.out.println("Number of flights display : " + xx);
+		int num_of_flights = flights_Size.size();
 
-		for (int j = 1; j <= xx; j++) {
+		System.out.println("Number of flights display : " + num_of_flights);
+
+		for (int j = 1; j <= num_of_flights; j++) {
+
 			String data = driver.findElement(By.xpath("//div[contains(@class, 'sponsored_list_wrapper')][" + j + "]"))
 					.getText();
-
-			//System.out.println("Flight " + j + ":" + data);
 
 			String[] flightDetails = data.split("\n");
 
 			for (int i = 0; i < flightDetails.length; i++) {
-				//System.out.println("Element: "+ flightDetails[i]);
+
 				Matcher matcher = TIME_PATTERN.matcher(flightDetails[i]);
 				if (matcher.matches()) {
 					int hour = Integer.parseInt(matcher.group(1));
@@ -201,42 +198,12 @@ public class HomePage2 extends PageObject {
 					break;
 				}
 			}
-			
-			
-
-			/*
-			 * String[] depTime = this.xFlightDepTime.getText().split(":");
-			 * System.out.println(depTime[0]);
-			 * 
-			 * int startTime = Integer.parseInt(depTime[0]); System.out.println(startTime);
-			 * 
-			 * if (startTime >= 9&& startTime <= 10) {
-			 * System.out.println("im in if condition"); String flghtinfo =
-			 * this.xFlightDetails.getText(); System.out.println(flghtinfo);
-			 * 
-			 * String[] flightDetails = flghtinfo.split("\n");
-			 * System.out.println("Flight Name: " + flightDetails[0]);
-			 * System.out.println("Flight Number: " + flightDetails[1]);
-			 * System.out.println("Departure Time: " + flightDetails[2]);
-			 * System.out.println("From: " + flightDetails[3]);
-			 * System.out.println("Arrival Time: " + flightDetails[4]);
-			 * System.out.println("To: " + flightDetails[5]);
-			 * System.out.println("Duration: " + flightDetails[6]);
-			 * System.out.println("Flight Type: " + flightDetails[7]);
-			 * System.out.println("Amount: " + flightDetails[8]); System.out.println(
-			 * "---------------------------------------------------------------------------------------------------------"
-			 * ); } else { System.out.println("im in else loop"); }
-			 */
 
 		}
 		return true;
 
 	}
 
-	private Object findElements(By xpath) {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
 	public boolean getUrl(String url) {
 		driver.get(url);
