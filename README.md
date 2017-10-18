@@ -1,12 +1,12 @@
 # MakeMytrip-assignment
-Description:Test automation for makemytrip to get the flight detials in between of 9AM to 10AM
+Description: Get the Flight details from Hyderabad to Bangalore between 9am to 10am
 
 Pre requirements:
-install maven, eclipse, java, google-chrome browser and chrome driver
+install Maven, Eclipse, java, Google-Chrome browser(Version 61) and Chrome driver
 
 Steps to run the code:
 clone the project or download as zip file
-import project in the eclipse
+import project in to the eclipse
 run the pom.xml file(it will add maven dependencies)
 run the testng.xml
 Observe the results after completion of the execution of test
